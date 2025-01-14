@@ -2,7 +2,7 @@ from langchain.chains import LLMChain
 from langchain import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 
-open_api_key="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"
+open_api_key="OPENAI_API_KEY"
 llm=ChatOpenAI(model_name='gpt-3.5-turbo',openai_api_key=open_api_key)
 
 
