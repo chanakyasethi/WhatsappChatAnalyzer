@@ -1,9 +1,10 @@
 from langchain.chains import LLMChain
 from langchain import PromptTemplate
 from langchain.chat_models import ChatOpenAI
+import os
 
-open_api_key="OPENAI_API_KEY"
-llm=ChatOpenAI(model_name='gpt-3.5-turbo',openai_api_key=open_api_key)
+open_api_key=os.getenv("OPENAI_API_KEY")
+llm=ChatOpenAI(model_name=os.getenv("OPENAI_MODEL"),openai_api_key=open_api_key)
 
 
 def get_summary(text):
